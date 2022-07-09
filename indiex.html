@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>LIFF - LINE Front-end Framework</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+        async function main() {
+            await liff.init({liffId: "1657286865-WGnzrbR2"})
+            await liff.shareTargetPicker([
+                {
+                    "type": "flex",
+                    "altText": "Flex Message ftrom Share Taeget Picker",
+                    "contents": {
+  "type": "bubble",
+  "direction": "ltr",
+  "hero": {
+    "type": "image",
+    "url": "https://glunjai.com/wp-content/uploads/2022/06/สมาธิ-7.jpg",
+    "size": "full",
+    "aspectRatio": "1.51:1",
+    "aspectMode": "cover"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "ทดสอบ",
+        "align": "center",
+        "contents": []
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "share",
+          "uri": "https://liff.line.me/1657286865-WGnzrbR2"
+        }
+      }
+    ]
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+         }
+         main()
+    </script>
+</body>
+</html>
